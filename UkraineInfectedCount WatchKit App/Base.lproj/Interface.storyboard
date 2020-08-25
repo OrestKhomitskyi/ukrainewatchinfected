@@ -1,42 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14815" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NBu-mt-KyX">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16096" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9ZY-6e-ikQ">
     <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14770"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14621"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
     </dependencies>
     <scenes>
-        <!--Hosting Controller-->
-        <scene sceneID="RUd-og-cv4">
+        <!--Interface Controller-->
+        <scene sceneID="xXZ-jf-zha">
             <objects>
-                <hostingController id="NBu-mt-KyX" customClass="HostingController" 
-                customModuleProvider="target"/>                
-            </objects>
-            <point key="canvasLocation" x="187" y="141"/>
-        </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
-            <objects>
-                <notificationController id="YCC-NB-fut">
+                <controller id="9ZY-6e-ikQ" customClass="InterfaceController" customModule="UkraineInfectedCount_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                        <label width="1" widthAdjustment="1" height="48" alignment="left" text="Інфікованих в Україні" textAlignment="center" numberOfLines="2" id="Bdg-9A-a19"/>
+                        <label width="1" height="60" alignment="left" text="..." textAlignment="center" baselineAdjustment="alignCenters" id="e6d-bc-GhE" customClass="CountLabel">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
+                        </label>
+                        <button width="1" alignment="left" title="Обновити" id="Yz0-0i-p5M">
+                            <connections>
+                                <action selector="buttonClick" destination="9ZY-6e-ikQ" id="nlI-eb-wb3"/>
+                            </connections>
+                        </button>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                        <outlet property="countLabel" destination="e6d-bc-GhE" id="CSM-yq-zrf"/>
+                        <outlet property="updateButton" destination="Yz0-0i-p5M" id="MRX-kD-pdc"/>
+                        <segue destination="HwH-QA-eK2" kind="relationship" relationship="nextPage" id="Ql6-iX-wd7"/>
                     </connections>
-                </notificationController>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="187" y="462"/>
+            <point key="canvasLocation" x="164" y="76"/>
         </scene>
-        <!--Notification Hosting Controller-->
-        <scene sceneID="Niz-AI-uX2">
+        <!--World Infected Interface Controller-->
+        <scene sceneID="I9v-a6-a9J">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController"
-                customModuleProvider="target"/>
+                <controller id="HwH-QA-eK2" customClass="WorldInfectedInterfaceController" customModule="UkraineInfectedCount_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="48" alignment="left" text="Інфікованих у Світі" textAlignment="center" numberOfLines="2" id="P73-4g-Fdb"/>
+                        <label width="1" height="60" alignment="left" text="..." textAlignment="center" id="Pen-7I-pnR">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
+                        </label>
+                        <button width="1" alignment="left" title="Оновити" id="icp-EV-F33">
+                            <connections>
+                                <action selector="buttonClick" destination="HwH-QA-eK2" id="VvY-cu-S89"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="countLabel" destination="Pen-7I-pnR" id="Ixk-U3-f7G"/>
+                        <outlet property="updateButton" destination="icp-EV-F33" id="8jW-rl-pw0"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="488" y="462"/>
+            <point key="canvasLocation" x="427" y="76"/>
         </scene>
     </scenes>
 </document>

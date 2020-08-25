@@ -18,6 +18,9 @@
 		7BFDBFA424F5505600075098 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFDBFA324F5505600075098 /* NotificationView.swift */; };
 		7BFDBFA624F5505800075098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BFDBFA524F5505800075098 /* Assets.xcassets */; };
 		7BFDBFA924F5505800075098 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BFDBFA824F5505800075098 /* Preview Assets.xcassets */; };
+		7BFDBFBA24F551D500075098 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFDBFB924F551D500075098 /* InterfaceController.swift */; };
+		7BFDBFBD24F56A2500075098 /* StructureClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFDBFBC24F56A2500075098 /* StructureClasses.swift */; };
+		7BFDBFBF24F586DB00075098 /* WorldInfectedInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFDBFBE24F586DB00075098 /* WorldInfectedInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		7BFDBFA824F5505800075098 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7BFDBFAA24F5505800075098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BFDBFAB24F5505800075098 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		7BFDBFB924F551D500075098 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		7BFDBFBC24F56A2500075098 /* StructureClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureClasses.swift; sourceTree = "<group>"; };
+		7BFDBFBE24F586DB00075098 /* WorldInfectedInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldInfectedInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		7BFDBF9A24F5505600075098 /* UkraineInfectedCount WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7BFDBFBB24F56A0500075098 /* Models */,
 				7BFDBF9B24F5505600075098 /* ContentView.swift */,
 				7BFDBF9D24F5505600075098 /* HostingController.swift */,
 				7BFDBF9F24F5505600075098 /* ExtensionDelegate.swift */,
@@ -132,6 +139,8 @@
 				7BFDBFAA24F5505800075098 /* Info.plist */,
 				7BFDBFAB24F5505800075098 /* PushNotificationPayload.apns */,
 				7BFDBFA724F5505800075098 /* Preview Content */,
+				7BFDBFB924F551D500075098 /* InterfaceController.swift */,
+				7BFDBFBE24F586DB00075098 /* WorldInfectedInterfaceController.swift */,
 			);
 			path = "UkraineInfectedCount WatchKit Extension";
 			sourceTree = "<group>";
@@ -142,6 +151,14 @@
 				7BFDBFA824F5505800075098 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7BFDBFBB24F56A0500075098 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7BFDBFBC24F56A2500075098 /* StructureClasses.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,9 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BFDBFBF24F586DB00075098 /* WorldInfectedInterfaceController.swift in Sources */,
+				7BFDBFBD24F56A2500075098 /* StructureClasses.swift in Sources */,
 				7BFDBF9E24F5505600075098 /* HostingController.swift in Sources */,
 				7BFDBF9C24F5505600075098 /* ContentView.swift in Sources */,
 				7BFDBFA224F5505600075098 /* NotificationController.swift in Sources */,
+				7BFDBFBA24F551D500075098 /* InterfaceController.swift in Sources */,
 				7BFDBFA024F5505600075098 /* ExtensionDelegate.swift in Sources */,
 				7BFDBFA424F5505600075098 /* NotificationView.swift in Sources */,
 			);
@@ -425,6 +445,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"UkraineInfectedCount WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = W7M797D7RW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "UkraineInfectedCount WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -448,6 +469,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"UkraineInfectedCount WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = W7M797D7RW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "UkraineInfectedCount WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -471,6 +493,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7M797D7RW;
 				IBSC_MODULE = UkraineInfectedCount_WatchKit_Extension;
 				INFOPLIST_FILE = "UkraineInfectedCount WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.orko-production.UkraineInfectedCount.watchkitapp";
@@ -489,6 +512,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7M797D7RW;
 				IBSC_MODULE = UkraineInfectedCount_WatchKit_Extension;
 				INFOPLIST_FILE = "UkraineInfectedCount WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.orko-production.UkraineInfectedCount.watchkitapp";
@@ -506,6 +530,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W7M797D7RW;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.orko-production.UkraineInfectedCount";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,6 +543,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W7M797D7RW;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.orko-production.UkraineInfectedCount";
 				PRODUCT_NAME = "$(TARGET_NAME)";
